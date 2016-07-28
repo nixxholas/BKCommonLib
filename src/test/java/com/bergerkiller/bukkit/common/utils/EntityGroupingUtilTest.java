@@ -365,7 +365,7 @@ public class EntityGroupingUtilTest {
         assertEquals("Zombie type = zombie", "zombie", EntityGroupingUtil.getName(EntityType.ZOMBIE));
     }
 
-    public static enum EntityTestList {
+    public enum EntityTestList {
         ANIMAL_TEST(EntityCategory.ANIMAL, EntityType.SHEEP, EntityType.ZOMBIE, true),
         MONSTER_TEST(EntityCategory.MONSTER, EntityType.ZOMBIE, EntityType.SHEEP, true),
         NPC_TEST(EntityCategory.NPC, EntityType.VILLAGER, EntityType.ZOMBIE, true),
@@ -379,7 +379,8 @@ public class EntityGroupingUtilTest {
         private EntityType matching;
         private EntityType nonMatching;
         private boolean legacyField;
-        private EntityTestList (EntityCategory entityCategory, EntityType matching, EntityType nonMatching, boolean legacyField) {
+
+        EntityTestList (EntityCategory entityCategory, EntityType matching, EntityType nonMatching, boolean legacyField) {
             this.setEntityCategory(entityCategory);
             this.setLegacyField(legacyField);
             this.setMatching(matching);

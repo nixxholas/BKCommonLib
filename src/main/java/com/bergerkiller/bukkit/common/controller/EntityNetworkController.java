@@ -8,6 +8,7 @@ import com.bergerkiller.bukkit.common.bases.mutable.VectorAbstract;
 import com.bergerkiller.bukkit.common.conversion.Conversion;
 import com.bergerkiller.bukkit.common.entity.CommonEntity;
 import com.bergerkiller.bukkit.common.entity.CommonEntityController;
+import com.bergerkiller.bukkit.common.entity.nms.EnumEntitySize;
 import com.bergerkiller.bukkit.common.entity.nms.NMSEntityTrackerEntry;
 import com.bergerkiller.bukkit.common.protocol.CommonPacket;
 import com.bergerkiller.bukkit.common.protocol.PacketType;
@@ -20,6 +21,7 @@ import com.bergerkiller.bukkit.common.wrappers.DataWatcher;
 import com.google.common.primitives.Ints;
 
 import net.minecraft.server.v1_9_R1.*;
+import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.HumanEntity;
@@ -64,34 +66,34 @@ public abstract class EntityNetworkController<T extends CommonEntity<?>> extends
      */
     public VectorAbstract velSynched = new VectorAbstract() {
         public double getX() {
-        	SafeField<Double> n = new SafeField<>(EntityTrackerEntry.class, "e");
+        	SafeField<Double> n = new SafeField<>(EntityTrackerEntry.class, "n");
             return n.get(handle);
         }
 
         public double getY() {
-        	SafeField<Double> o = new SafeField<>(EntityTrackerEntry.class, "f");
+        	SafeField<Double> o = new SafeField<>(EntityTrackerEntry.class, "o");
             return o.get(handle);
         }
 
         public double getZ() {
-        	SafeField<Double> p = new SafeField<>(EntityTrackerEntry.class, "g");
+        	SafeField<Double> p = new SafeField<>(EntityTrackerEntry.class, "p");
             return p.get(handle);
         }
 
         public VectorAbstract setX(double x) {
-        	SafeField<Double> n = new SafeField<>(EntityTrackerEntry.class, "e");
+        	SafeField<Double> n = new SafeField<>(EntityTrackerEntry.class, "n");
         	n.set(handle, x);
             return this;
         }
 
         public VectorAbstract setY(double y) {
-        	SafeField<Double> o = new SafeField<>(EntityTrackerEntry.class, "f");
+        	SafeField<Double> o = new SafeField<>(EntityTrackerEntry.class, "o");
         	o.set(handle, y);
             return this;
         }
 
         public VectorAbstract setZ(double z) {
-        	SafeField<Double> p = new SafeField<>(EntityTrackerEntry.class, "g");
+        	SafeField<Double> p = new SafeField<>(EntityTrackerEntry.class, "p");
         	p.set(handle, z);
             return this;
         }
@@ -266,13 +268,13 @@ public abstract class EntityNetworkController<T extends CommonEntity<?>> extends
         public int get() {
         	SafeField<Integer> headYaw = new SafeField<>(EntityTrackerEntry.class, "headYaw");
         	return headYaw.get(handle);
-            //return ((EntityTrackerEntry) handle).i;
+            //return ((EntityTrackerEntry) handle).a;
         }
 
         public IntegerAbstract set(int value) {
         	SafeField<Integer> headYaw = new SafeField<>(EntityTrackerEntry.class, "headYaw");
         	headYaw.set(handle, value);
-            //((EntityTrackerEntry) handle).i = value;
+            ((EntityTrackerEntry) handle).a = value;
             return this;
         }
     };
@@ -909,7 +911,10 @@ public abstract class EntityNetworkController<T extends CommonEntity<?>> extends
         EntityTrackerEntryRef.timeSinceLocationSync.set(handle, 0);
 
         // Send synchronization messages
-        broadcast(getLocationPacket(posX, posY, posZ, (byte) yaw, (byte) pitch));
+        Bukkit.getLogger().severe("x " + posX + "\ny " + posY + "\nz " + posZ + "\nyaw " + yaw + "\npitch " + pitch); //TODO DEBUG
+        CommonPacket b = getLocationPacket(posX, posY, posZ, (byte) yaw, (byte) pitch);
+        Bukkit.getLogger().severe("PACKET: " + b.toString());
+        broadcast(b);
     }
 
     /**
@@ -1100,16 +1105,16 @@ public abstract class EntityNetworkController<T extends CommonEntity<?>> extends
     /**
      * This method is copied from mc 1.7.10 source. This might not work
      *
-     * @param paramDouble
+     * @param d
      * @return int
      */
-    public static int a(double paramDouble) {
-        double d = paramDouble - (MathHelper.floor(paramDouble) + 0.5D);
+    public static int a(double d) {
+        double d1 = d - (MathHelper.floor(d) + 0.5D);
 
-        if (d < 0) {
-            return MathHelper.f(paramDouble * 32.0D);
+        if (d1 > 0.0D) {
+            return MathHelper.f(d * 32.0D);
+        } else {
+            return MathHelper.floor(d * 32.0D);
         }
-
-        return MathHelper.floor(paramDouble * 32.0D);
     }
 }

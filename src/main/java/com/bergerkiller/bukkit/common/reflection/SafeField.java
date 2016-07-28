@@ -132,7 +132,10 @@ public class SafeField<T> implements FieldAccessor<T> {
                 if (!this.isStatic() && object == null) {
                     throw new IllegalArgumentException("Non-static field requires a non-null instance");
                 }
-                t.printStackTrace();
+                if (t instanceof IllegalArgumentException) {
+                    Bukkit.getLogger().severe("Demn errors are real! \n Obj: " + object.toString() + "\n Val:" + value.toString() + "\nField: " + field.toString());
+                    t.printStackTrace();
+                }
                 this.field = null;
             }
         }

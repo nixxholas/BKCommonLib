@@ -17,9 +17,7 @@ public class SafeConstructor<T> {
         try {
             constructor = type.getConstructor(parameterTypes);
             constructor.setAccessible(true);
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (SecurityException | NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
