@@ -227,6 +227,6 @@ public abstract class CommonMinecart<T extends Minecart> extends CommonEntity<T>
      * (not a sloped rail)
      */
     public Vector getSlopedPosition(double x, double y, double z) {
-        return Conversion.toVector.convert(getHandle(EntityMinecartAbstract.class).k(x, y, z));
+        return Conversion.toVector.convert(getHandle(EntityMinecartAbstract.class).c(x, y, z));
     }
 }
