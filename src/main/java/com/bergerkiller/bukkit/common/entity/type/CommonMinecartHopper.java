@@ -48,7 +48,7 @@ public class CommonMinecartHopper extends CommonMinecartInventory<HopperMinecart
      * @return True if sucking items, False if not
      */
     public boolean isSuckingItems() {
-        return getHandle(EntityMinecartHopper.class).C();
+        return getHandle(EntityMinecartHopper.class).;
     }
 
     /**
@@ -57,7 +57,7 @@ public class CommonMinecartHopper extends CommonMinecartInventory<HopperMinecart
      * @param sucking state to set to
      */
     public void setSuckingItems(boolean sucking) {
-        getHandle(EntityMinecartHopper.class).f(sucking);
+        getHandle(EntityMinecartHopper.class).;
     }
 
     /**
