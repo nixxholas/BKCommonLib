@@ -53,30 +53,30 @@ public class ChunkProviderServerProxy extends ChunkProviderServer implements Pro
 
     @Deprecated
     public ChunkPosition _findNearestMapFeature(World world, String s, BlockPosition pos) {
-        return new ChunkPosition(base.a(world, s, pos));
+        return new ChunkPosition(base.a(world, s, pos, true));
     }
 
     public BlockPosition findNearestMapFeature(World world, String s, BlockPosition pos) {
-        return new BlockPosition(base.a(world, s, pos));
+        return new BlockPosition(base.a(world, s, pos, true));
     }
 
     @Deprecated
     public ChunkPosition findNearestMapFeature(World world, String s, int i, int j, int k) {
-        return new ChunkPosition(base.a(world, s, new BlockPosition(i, j, k)));
+        return new ChunkPosition(base.a(world, s, new BlockPosition(i, j, k), true));
     }
 
     @Deprecated
     public ChunkPosition super_findNearestMapFeature(World world, String s, int i, int j, int k) {
-        return new ChunkPosition(super.a(world, s, new BlockPosition(i, j, k)));
+        return new ChunkPosition(super.a(world, s, new BlockPosition(i, j, k), true));
     }
 
     @Deprecated
     public ChunkPosition _super_findNearestMapFeature(World world, String s, BlockPosition pos) {
-        return new ChunkPosition(super.a(world, s, pos));
+        return new ChunkPosition(super.a(world, s, pos, true));
     }
 
     public BlockPosition super_findNearestMapFeature(World world, String s, BlockPosition pos) {
-        return new BlockPosition(super.a(world, s, pos));
+        return new BlockPosition(super.a(world, s, pos, true));
     }
 
     public void getChunkAt(IChunkProvider arg0, int arg1, int arg2) {
@@ -148,13 +148,8 @@ public class ChunkProviderServerProxy extends ChunkProviderServer implements Pro
         return super.getOrLoadChunkAt(x, z);
     }
 
-    @Override
-    public boolean isChunkLoaded(int x, int z) {
-        return base.isChunkLoaded(x, z);
-    }
-
     public boolean super_isChunkLoaded(int x, int z) {
-        return super.isChunkLoaded(x, z);
+        return super.isLoaded(x, z);
     }
 
     @Override
@@ -165,12 +160,7 @@ public class ChunkProviderServerProxy extends ChunkProviderServer implements Pro
     public Chunk super_loadChunk(int x, int z) {
         return super.loadChunk(x, z);
     }
-
-    @Override
-    public void queueUnload(int x, int z) {
-        base.queueUnload(x, z);
-    }
-
+    
     public void super_queueUnload(int x, int z) {
         super.queueUnload(x, z);
     }
