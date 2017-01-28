@@ -368,7 +368,7 @@ public class BlockUtil extends MaterialUtil {
      * is no caller)
      */
     public static void applyPhysics(org.bukkit.block.Block block, Material callerType) {
-        CommonNMS.getNative(block.getWorld()).applyPhysics(new BlockPosition(block.getX(), block.getY(), block.getZ()), CommonNMS.getBlock(callerType));
+        CommonNMS.getNative(block.getWorld()).applyPhysics(new BlockPosition(block.getX(), block.getY(), block.getZ()), CommonNMS.getBlock(callerType), true);
     }
 
     /**
