@@ -180,8 +180,9 @@ public class NBTUtil {
         for (int i = 0; i < tags.size(); i++) {
             CommonTagCompound tag = (CommonTagCompound) tags.get(i);
             if (!tag.isEmpty()) {
-                inv.setItem(i, CraftItemStack.asCraftMirror(ItemStack.createStack(
-                        (NBTTagCompound) tag.getHandle())));
+                inv.setItem(i, CraftItemStack.asCraftMirror(new ItemStack(
+                        (NBTTagCompound) tag.getHandle())
+                ));
             }
         }
 
