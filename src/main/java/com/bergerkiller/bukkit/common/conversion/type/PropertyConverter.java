@@ -57,10 +57,6 @@ public abstract class PropertyConverter<T> extends BasicConverter<T> {
             // Ask additional getters
             if (value instanceof org.bukkit.block.Block) {
                 return ((org.bukkit.block.Block) value).getType();
-            } else if (value instanceof ItemStack) {
-                return Material.getMaterial(((ItemStack) value).c);
-            } else if (value instanceof EntityItem) {
-                return Material.getMaterial(((EntityItem) value).getItemStack().c);
             } else if (value instanceof org.bukkit.entity.Item) {
                 return ((org.bukkit.entity.Item) value).getItemStack().getType();
             } else if (value instanceof org.bukkit.inventory.ItemStack) {
