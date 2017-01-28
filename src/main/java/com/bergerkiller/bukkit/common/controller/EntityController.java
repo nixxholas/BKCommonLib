@@ -348,7 +348,7 @@ public class EntityController<T extends CommonEntity<?>> extends CommonEntityCon
         EntityRef.updateBlockCollision(handle);
 
         // Fire tick calculation (check using block collision)
-        final boolean isInWater = handle.ah(); // In water or raining
+        final boolean isInWater = handle.inWater; // In water or raining
         if (handle.world.a(handle.getBoundingBox().shrink(0.001), Material.FIRE, handle) || (handle.world.a(handle.getBoundingBox().shrink(0.001), Material.LAVA, handle))) {
             onBurnDamage(1);
             if (!isInWater) {
@@ -363,11 +363,11 @@ public class EntityController<T extends CommonEntity<?>> extends CommonEntityCon
                 }
             }
         } else if (handle.fireTicks <= 0) {
-            handle.fireTicks = -handle.maxFireTicks;
+            handle.fireTicks = -handle.fireTicks;
         }
         if (isInWater && handle.fireTicks > 0) {
             entity.makeRandomSound(Sound.BLOCK_FIRE_EXTINGUISH, 0.7f, 1.6f);
-            handle.fireTicks = -handle.maxFireTicks;
+            handle.fireTicks = -handle.fireTicks;
         }
     }
 
