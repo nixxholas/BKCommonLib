@@ -84,7 +84,7 @@ public final class DefaultEntityController extends EntityController {
         if (handle instanceof NMSEntityHook) {
             ((NMSEntityHook) handle).super_g(dx, dy, dz);
         } else {
-            ((Entity) handle).g(dx, dy, dz);
+            ((Entity) handle).setPosition(dx, dy, dz);
         }
     }
 
@@ -94,7 +94,7 @@ public final class DefaultEntityController extends EntityController {
         if (handle instanceof NMSEntityHook) {
             ((NMSEntityHook) handle).super_move(dx, dy, dz);
         } else {
-            ((Entity) handle).move(dx, dy, dz);
+            ((Entity) handle).setPosition(dx, dy, dz);
         }
     }
 }
