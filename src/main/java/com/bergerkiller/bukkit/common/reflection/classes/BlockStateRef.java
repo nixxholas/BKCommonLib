@@ -79,7 +79,7 @@ public class BlockStateRef {
                 TileEntitySkull t = (TileEntitySkull) tile;
                 state_profile.set(state, t.getGameProfile());
                 state_type.set(state, state_getSkullType.invoke(null, t.getSkullType()));
-                state_rotation.set(state, (byte) t.getRotation());
+                state_rotation.set(state, (byte) t.rotation);
             }
         });
         registerInst(new TileInstantiator("Command", "CommandBlock", "commandBlock") {
