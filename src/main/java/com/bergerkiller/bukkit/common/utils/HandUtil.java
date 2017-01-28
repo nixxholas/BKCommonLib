@@ -1,6 +1,6 @@
 package com.bergerkiller.bukkit.common.utils;
 
-import net.minecraft.server.v1_9_R1.EnumHand;
+import net.minecraft.server.v1_11_R1.EnumHand;
 import org.bukkit.inventory.MainHand;
 
 public class HandUtil {

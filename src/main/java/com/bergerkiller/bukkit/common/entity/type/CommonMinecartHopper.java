@@ -2,8 +2,8 @@ package com.bergerkiller.bukkit.common.entity.type;
 
 import com.bergerkiller.bukkit.common.reflection.FieldAccessor;
 import com.bergerkiller.bukkit.common.reflection.SafeField;
-import net.minecraft.server.v1_9_R1.EntityMinecartHopper;
-import net.minecraft.server.v1_9_R1.TileEntityHopper;
+import net.minecraft.server.v1_11_R1.EntityMinecartHopper;
+import net.minecraft.server.v1_11_R1.TileEntityHopper;
 import org.bukkit.Material;
 import org.bukkit.entity.minecart.HopperMinecart;
 import org.bukkit.inventory.ItemStack;

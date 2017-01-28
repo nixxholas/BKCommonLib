@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
-import net.minecraft.server.v1_9_R1.DataWatcherObject;
+import net.minecraft.server.v1_11_R1.DataWatcherObject;
 import org.bukkit.EntityEffect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.Sound;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_9_R1.CraftSound;
-import org.bukkit.craftbukkit.v1_9_R1.util.CraftMagicNumbers;
+import org.bukkit.craftbukkit.v1_11_R1.CraftSound;
+import org.bukkit.craftbukkit.v1_11_R1.util.CraftMagicNumbers;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
@@ -40,9 +40,9 @@ import com.bergerkiller.bukkit.common.utils.PacketUtil;
 import com.bergerkiller.bukkit.common.utils.WorldUtil;
 import com.bergerkiller.bukkit.common.wrappers.DataWatcher;
 
-import net.minecraft.server.v1_9_R1.Entity;
-import net.minecraft.server.v1_9_R1.EntityInsentient;
-import net.minecraft.server.v1_9_R1.EntityPlayer;
+import net.minecraft.server.v1_11_R1.Entity;
+import net.minecraft.server.v1_11_R1.EntityInsentient;
+import net.minecraft.server.v1_11_R1.EntityPlayer;
 
 /**
  * Extends the methods provided by the Entity Bukkit class.
@@ -871,7 +871,7 @@ public class ExtendedEntity<T extends org.bukkit.entity.Entity> {
      */
     @SuppressWarnings("unchecked")
     public void setWatchedData(int index, Object value) {
-    	net.minecraft.server.v1_9_R1.DataWatcher watcher = h().getDataWatcher();
+    	net.minecraft.server.v1_11_R1.DataWatcher watcher = h().getDataWatcher();
         Field f;
         try {
             f = watcher.getClass().getDeclaredField("c");
@@ -880,14 +880,14 @@ public class ExtendedEntity<T extends org.bukkit.entity.Entity> {
             return;
         }
         f.setAccessible(true);
-        HashMap<Integer, net.minecraft.server.v1_9_R1.DataWatcher.Item> map;
+        HashMap<Integer, net.minecraft.server.v1_11_R1.DataWatcher.Item> map;
         try {
-            map = (HashMap<Integer, net.minecraft.server.v1_9_R1.DataWatcher.Item>) f.get(watcher);
+            map = (HashMap<Integer, net.minecraft.server.v1_11_R1.DataWatcher.Item>) f.get(watcher);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
             return;
         }
-        net.minecraft.server.v1_9_R1.DataWatcher.Item item = map.get(index);
+        net.minecraft.server.v1_11_R1.DataWatcher.Item item = map.get(index);
         if (item != null) {
             item.a((T) value);
         }
@@ -916,7 +916,7 @@ public class ExtendedEntity<T extends org.bukkit.entity.Entity> {
      * @return data, or def if not found
      */
     public <K> K getWatchedData(int index, Class<K> type, K def) {
-    	net.minecraft.server.v1_9_R1.DataWatcher watcher = h().getDataWatcher();
+    	net.minecraft.server.v1_11_R1.DataWatcher watcher = h().getDataWatcher();
         Field f;
         try {
             f = watcher.getClass().getDeclaredField("c");
@@ -925,14 +925,14 @@ public class ExtendedEntity<T extends org.bukkit.entity.Entity> {
             return def;
         }
         f.setAccessible(true);
-        HashMap<Integer, net.minecraft.server.v1_9_R1.DataWatcher.Item> map;
+        HashMap<Integer, net.minecraft.server.v1_11_R1.DataWatcher.Item> map;
         try {
-            map = (HashMap<Integer, net.minecraft.server.v1_9_R1.DataWatcher.Item>) f.get(watcher);
+            map = (HashMap<Integer, net.minecraft.server.v1_11_R1.DataWatcher.Item>) f.get(watcher);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
             return def;
         }
-        net.minecraft.server.v1_9_R1.DataWatcher.Item item = map.get(index);
+        net.minecraft.server.v1_11_R1.DataWatcher.Item item = map.get(index);
         if (item == null) {
             return def;
         }

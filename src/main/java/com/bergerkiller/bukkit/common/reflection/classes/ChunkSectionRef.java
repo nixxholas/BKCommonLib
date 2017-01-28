@@ -5,8 +5,8 @@ import com.bergerkiller.bukkit.common.reflection.ClassTemplate;
 import com.bergerkiller.bukkit.common.reflection.FieldAccessor;
 import com.bergerkiller.bukkit.common.reflection.MethodAccessor;
 import com.bergerkiller.bukkit.common.reflection.NMSClassTemplate;
-import net.minecraft.server.v1_9_R1.Block;
-import net.minecraft.server.v1_9_R1.IBlockData;
+import net.minecraft.server.v1_11_R1.Block;
+import net.minecraft.server.v1_11_R1.IBlockData;
 
 public class ChunkSectionRef {
 

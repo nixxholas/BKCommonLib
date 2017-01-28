@@ -1,6 +1,6 @@
 package net.friwi.reflection;
 
-import net.minecraft.server.v1_9_R1.EntityItem;
+import net.minecraft.server.v1_11_R1.EntityItem;
 
 import java.lang.reflect.Field;
 

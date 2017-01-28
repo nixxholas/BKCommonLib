@@ -6,7 +6,7 @@ import com.bergerkiller.bukkit.common.reflection.SafeMethod;
 import com.bergerkiller.bukkit.common.reflection.classes.WorldServerRef;
 import com.bergerkiller.bukkit.common.utils.CommonUtil;
 import net.friwi.reflection.WorldManagerReflector;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_11_R1.*;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;

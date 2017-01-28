@@ -2,7 +2,7 @@ package com.bergerkiller.bukkit.common.controller;
 
 import java.util.List;
 
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_11_R1.*;
 import org.bukkit.Sound;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.HumanEntity;

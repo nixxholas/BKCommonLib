@@ -8,11 +8,11 @@ import com.bergerkiller.bukkit.common.conversion.util.ConvertingList;
 import com.bergerkiller.bukkit.common.internal.CommonNMS;
 import com.bergerkiller.bukkit.common.reflection.classes.*;
 import com.bergerkiller.bukkit.common.wrappers.EntityTracker;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_11_R1.*;
 import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.block.Block;
-import org.bukkit.craftbukkit.v1_9_R1.CraftTravelAgent;
+import org.bukkit.craftbukkit.v1_11_R1.CraftTravelAgent;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 

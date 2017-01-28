@@ -1,14 +1,15 @@
 package com.bergerkiller.bukkit.common.bases;
 
 import com.bergerkiller.bukkit.common.conversion.ChatComponentConvertor;
-import net.minecraft.server.v1_9_R1.EntityHuman;
-import net.minecraft.server.v1_9_R1.IChatBaseComponent;
-import net.minecraft.server.v1_9_R1.IInventory;
-import net.minecraft.server.v1_9_R1.ItemStack;
+import java.util.ArrayList;
+import net.minecraft.server.v1_11_R1.EntityHuman;
+import net.minecraft.server.v1_11_R1.IChatBaseComponent;
+import net.minecraft.server.v1_11_R1.IInventory;
+import net.minecraft.server.v1_11_R1.ItemStack;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_9_R1.entity.CraftHumanEntity;
-import org.bukkit.craftbukkit.v1_9_R1.inventory.CraftInventory;
+import org.bukkit.craftbukkit.v1_11_R1.entity.CraftHumanEntity;
+import org.bukkit.craftbukkit.v1_11_R1.inventory.CraftInventory;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -31,10 +32,10 @@ public class IInventoryBase implements IInventory {
     }
 
     @Override
-    public ItemStack[] getContents() {
-        ItemStack[] contents = new ItemStack[this.getSize()];
-        for (int i = 0; i < contents.length; i++) {
-            contents[i] = this.getItem(i);
+    public List<ItemStack> getContents() {
+        List<ItemStack> contents = new ArrayList<>();
+        for (int i = 0; i < this.getSize(); i++) {
+            contents.add(this.getItem(i));
         }
         return contents;
     }
@@ -89,13 +90,13 @@ public class IInventoryBase implements IInventory {
         ItemStack item = this.getItem(index);
         if (item != null) {
             ItemStack itemstack;
-            if (item.count <= size) {
+            if (item.getCount() <= size) {
                 itemstack = item;
                 this.setItem(index, null);
                 return itemstack;
             } else {
                 itemstack = item.cloneAndSubtract(size); //TODO: CHECK IF NOTHING BROKE
-                if (item.count == 0) {
+                if (item.getCount() == 0) {
                     this.setItem(index, null);
                 }
                 return itemstack;
@@ -179,17 +180,23 @@ public class IInventoryBase implements IInventory {
     public void setProperty(int i, int j) {
     }
 
-    @Override
-    public int g() {
-        return 0;
-    }
-
-    @Override
-    public void l() {
-    }
-
 	@Override
 	public Location getLocation() {
 		return null;
 	}
+
+    @Override
+    public boolean w_() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int h() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void clear() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

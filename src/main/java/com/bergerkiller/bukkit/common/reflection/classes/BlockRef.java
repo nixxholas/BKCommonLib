@@ -1,11 +1,11 @@
 package com.bergerkiller.bukkit.common.reflection.classes;
 
 import com.bergerkiller.bukkit.common.reflection.*;
-import net.minecraft.server.v1_9_R1.Block;
-import net.minecraft.server.v1_9_R1.BlockPosition;
-import net.minecraft.server.v1_9_R1.Explosion;
-import net.minecraft.server.v1_9_R1.IBlockData;
-import org.bukkit.craftbukkit.v1_9_R1.util.CraftMagicNumbers;
+import net.minecraft.server.v1_11_R1.Block;
+import net.minecraft.server.v1_11_R1.BlockPosition;
+import net.minecraft.server.v1_11_R1.Explosion;
+import net.minecraft.server.v1_11_R1.IBlockData;
+import org.bukkit.craftbukkit.v1_11_R1.util.CraftMagicNumbers;
 
 public class BlockRef {
 

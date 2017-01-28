@@ -11,12 +11,12 @@ import com.bergerkiller.bukkit.common.reflection.classes.DataWatcherRef;
 import com.bergerkiller.bukkit.common.reflection.classes.EnumProtocolRef;
 import com.bergerkiller.bukkit.common.utils.CommonUtil;
 import com.bergerkiller.bukkit.common.wrappers.DataWatcher;
-import net.minecraft.server.v1_9_R1.PacketPlayInFlying.PacketPlayInLook;
-import net.minecraft.server.v1_9_R1.PacketPlayInFlying.PacketPlayInPosition;
-import net.minecraft.server.v1_9_R1.PacketPlayInFlying.PacketPlayInPositionLook;
-import net.minecraft.server.v1_9_R1.PacketPlayOutEntity.PacketPlayOutEntityLook;
-import net.minecraft.server.v1_9_R1.PacketPlayOutEntity.PacketPlayOutRelEntityMove;
-import net.minecraft.server.v1_9_R1.PacketPlayOutEntity.PacketPlayOutRelEntityMoveLook;
+import net.minecraft.server.v1_11_R1.PacketPlayInFlying.PacketPlayInLook;
+import net.minecraft.server.v1_11_R1.PacketPlayInFlying.PacketPlayInPosition;
+import net.minecraft.server.v1_11_R1.PacketPlayInFlying.PacketPlayInPositionLook;
+import net.minecraft.server.v1_11_R1.PacketPlayOutEntity.PacketPlayOutEntityLook;
+import net.minecraft.server.v1_11_R1.PacketPlayOutEntity.PacketPlayOutRelEntityMove;
+import net.minecraft.server.v1_11_R1.PacketPlayOutEntity.PacketPlayOutRelEntityMoveLook;
 
 import java.util.logging.Level;
 

@@ -3,10 +3,10 @@ package com.bergerkiller.bukkit.common.reflection.classes;
 import com.bergerkiller.bukkit.common.bases.IntVector2;
 import com.bergerkiller.bukkit.common.bases.IntVector3;
 import com.bergerkiller.bukkit.common.internal.CommonNMS;
-import net.minecraft.server.v1_9_R1.ChunkCoordIntPair;
+import net.minecraft.server.v1_11_R1.ChunkCoordIntPair;
 import net.friwi.reflection.ChunkCoordinates;
 import net.friwi.reflection.ChunkPosition;
-import net.minecraft.server.v1_9_R1.Vec3D;
+import net.minecraft.server.v1_11_R1.Vec3D;
 import org.bukkit.util.Vector;
 
 /**

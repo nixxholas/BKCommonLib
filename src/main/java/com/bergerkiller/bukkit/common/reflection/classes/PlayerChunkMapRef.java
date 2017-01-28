@@ -3,7 +3,7 @@ package com.bergerkiller.bukkit.common.reflection.classes;
 import com.bergerkiller.bukkit.common.conversion.ConversionPairs;
 import com.bergerkiller.bukkit.common.reflection.*;
 import com.bergerkiller.bukkit.common.wrappers.LongHashMap;
-import net.minecraft.server.v1_9_R1.BlockPosition;
+import net.minecraft.server.v1_11_R1.BlockPosition;
 
 import java.util.List;
 import java.util.Queue;

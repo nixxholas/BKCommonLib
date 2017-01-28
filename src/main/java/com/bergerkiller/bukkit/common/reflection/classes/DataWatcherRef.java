@@ -2,7 +2,7 @@ package com.bergerkiller.bukkit.common.reflection.classes;
 
 import com.bergerkiller.bukkit.common.reflection.*;
 
-import net.minecraft.server.v1_9_R1.DataWatcherObject;
+import net.minecraft.server.v1_11_R1.DataWatcherObject;
 
 import java.util.List;
 

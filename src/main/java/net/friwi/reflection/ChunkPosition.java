@@ -1,9 +1,9 @@
 package net.friwi.reflection;
 
-import net.minecraft.server.v1_9_R1.BaseBlockPosition;
-import net.minecraft.server.v1_9_R1.BlockPosition;
-import net.minecraft.server.v1_9_R1.Entity;
-import net.minecraft.server.v1_9_R1.Vec3D;
+import net.minecraft.server.v1_11_R1.BaseBlockPosition;
+import net.minecraft.server.v1_11_R1.BlockPosition;
+import net.minecraft.server.v1_11_R1.Entity;
+import net.minecraft.server.v1_11_R1.Vec3D;
 
 public class ChunkPosition extends BlockPosition {
 

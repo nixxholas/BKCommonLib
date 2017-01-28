@@ -3,9 +3,9 @@ package com.bergerkiller.bukkit.common.wrappers;
 import com.bergerkiller.bukkit.common.conversion.Conversion;
 import com.bergerkiller.bukkit.common.internal.CommonNMS;
 import com.bergerkiller.bukkit.common.reflection.classes.BlockRef;
-import net.minecraft.server.v1_9_R1.Block;
-import net.minecraft.server.v1_9_R1.Explosion;
-import net.minecraft.server.v1_9_R1.World;
+import net.minecraft.server.v1_11_R1.Block;
+import net.minecraft.server.v1_11_R1.Explosion;
+import net.minecraft.server.v1_11_R1.World;
 import org.bukkit.entity.Entity;
 
 /**

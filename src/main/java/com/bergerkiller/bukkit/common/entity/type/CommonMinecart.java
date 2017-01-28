@@ -15,8 +15,8 @@ import com.bergerkiller.bukkit.common.utils.CommonUtil;
 import com.bergerkiller.bukkit.common.utils.MaterialUtil;
 import com.bergerkiller.bukkit.common.utils.MathUtil;
 
-import net.minecraft.server.v1_9_R1.EntityMinecartAbstract;
-import net.minecraft.server.v1_9_R1.EntityMinecartRideable;
+import net.minecraft.server.v1_11_R1.EntityMinecartAbstract;
+import net.minecraft.server.v1_11_R1.EntityMinecartRideable;
 
 /**
  * An abstract implementation for all Minecarts

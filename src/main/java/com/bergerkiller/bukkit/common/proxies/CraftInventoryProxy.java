@@ -1,8 +1,8 @@
 package com.bergerkiller.bukkit.common.proxies;
 
-import net.minecraft.server.v1_9_R1.IInventory;
+import net.minecraft.server.v1_11_R1.IInventory;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_9_R1.inventory.CraftInventory;
+import org.bukkit.craftbukkit.v1_11_R1.inventory.CraftInventory;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;

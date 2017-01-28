@@ -1,8 +1,8 @@
 package com.bergerkiller.bukkit.common.proxies;
 
 import net.friwi.reflection.ChunkPosition;
-import net.minecraft.server.v1_9_R1.BiomeBase.BiomeMeta;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_11_R1.BiomeBase.BiomeMeta;
+import net.minecraft.server.v1_11_R1.*;
 
 import java.util.List;
 

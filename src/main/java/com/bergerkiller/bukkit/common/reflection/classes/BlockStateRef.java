@@ -8,9 +8,9 @@ import org.bukkit.SkullType;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
-import org.bukkit.craftbukkit.v1_9_R1.CraftChunk;
-import org.bukkit.craftbukkit.v1_9_R1.CraftWorld;
-import org.bukkit.craftbukkit.v1_9_R1.block.CraftBlockState;
+import org.bukkit.craftbukkit.v1_11_R1.CraftChunk;
+import org.bukkit.craftbukkit.v1_11_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_11_R1.block.CraftBlockState;
 import org.bukkit.material.MaterialData;
 
 import com.bergerkiller.bukkit.common.collections.ClassMap;
@@ -24,9 +24,9 @@ import com.bergerkiller.bukkit.common.utils.CommonUtil;
 import com.bergerkiller.bukkit.common.utils.MaterialUtil;
 import com.mojang.authlib.GameProfile;
 
-import net.minecraft.server.v1_9_R1.CommandBlockListenerAbstract;
-import net.minecraft.server.v1_9_R1.IChatBaseComponent;
-import net.minecraft.server.v1_9_R1.TileEntitySkull;
+import net.minecraft.server.v1_11_R1.CommandBlockListenerAbstract;
+import net.minecraft.server.v1_11_R1.IChatBaseComponent;
+import net.minecraft.server.v1_11_R1.TileEntitySkull;
 
 public class BlockStateRef {
 

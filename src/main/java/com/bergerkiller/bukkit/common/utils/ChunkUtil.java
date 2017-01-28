@@ -10,13 +10,13 @@ import com.bergerkiller.bukkit.common.internal.CommonPlugin;
 import com.bergerkiller.bukkit.common.reflection.FieldAccessor;
 import com.bergerkiller.bukkit.common.reflection.SafeField;
 import com.bergerkiller.bukkit.common.reflection.classes.*;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_11_R1.*;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.BlockState;
-import org.bukkit.craftbukkit.v1_9_R1.util.LongHash;
-import org.bukkit.craftbukkit.v1_9_R1.util.LongHashSet;
-import org.bukkit.craftbukkit.v1_9_R1.util.LongObjectHashMap;
+import org.bukkit.craftbukkit.v1_11_R1.util.LongHash;
+import org.bukkit.craftbukkit.v1_11_R1.util.LongHashSet;
+import org.bukkit.craftbukkit.v1_11_R1.util.LongObjectHashMap;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;

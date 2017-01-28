@@ -4,10 +4,10 @@ import com.bergerkiller.bukkit.common.conversion.Conversion;
 import com.bergerkiller.bukkit.common.internal.CommonNMS;
 import com.bergerkiller.bukkit.common.reflection.classes.PlayerChunkMapRef;
 import com.bergerkiller.bukkit.common.reflection.classes.PlayerChunkRef;
-import net.minecraft.server.v1_9_R1.ChunkCoordIntPair;
-import net.minecraft.server.v1_9_R1.EntityPlayer;
-import net.minecraft.server.v1_9_R1.PlayerChunkMap;
-import net.minecraft.server.v1_9_R1.WorldServer;
+import net.minecraft.server.v1_11_R1.ChunkCoordIntPair;
+import net.minecraft.server.v1_11_R1.EntityPlayer;
+import net.minecraft.server.v1_11_R1.PlayerChunkMap;
+import net.minecraft.server.v1_11_R1.WorldServer;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
